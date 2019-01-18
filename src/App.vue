@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <StartScreen /> 
+    <h1>{{ message }}</h1> <!--Интерполяция для вывода данных переданных в объект massage-->
+    <StartScreen /> <!--Экспорт компонента--> 
   </div>
 </template>
 
@@ -10,7 +11,7 @@
   export default {
     data () {
       return {
-        
+        message: 'Основы Vue'
       }
     },
    
