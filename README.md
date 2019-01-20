@@ -5,8 +5,8 @@
 
  - v-show="view"
    - Показывает/скрывает элемент в Dom (display: none/block)
-   export default {
-    data() {
-       view: false
-    }
-   }
+   - export default {
+      data() {
+         view: false
+      }
+     }
