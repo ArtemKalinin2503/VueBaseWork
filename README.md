@@ -37,23 +37,7 @@
 
  - Для анимации необходимо задать ключевой тег <transition></transition> и обвернуть ним элемент, который необходимо анимировать 
  
- - Пример стилей для анимации:
- 
- .newAnim-enter-active {
-   animation: newAnim-in .5s;
- }
- .newAnim-leave-active {
-   animation: newAniw-in .5s reverse;
- }
- @keyframes newAnim-in {
-   0% {
-     transform: scale(0);
-   }
-   50% {
-     transform: scale(1.5);
-   }
-   100% {
-     transform: scale(1);
-   }
- }
+ P.S
+
+Более подробное описание в коде с примерами 
  
