@@ -48,6 +48,19 @@
            <li/>
          </ul>
       </div>
+      <div class="vue-animation">
+        <h5>Блок с анимацией</h5>
+        <!--С помощью дерективы v-on:click - будем изменять show-->
+        <button v-on:click="show = !show">Toggle</button>
+        <!--Тег для анимации все что внутри данного тега будет применяться анимация-->
+        <transition name="fade">
+          <!--Если деректива v-if - будет возвращать false - тогда элемент будет скрыт-->
+          <p v-if="show">Lorem ipsun dolor sit amet!</p>
+        </transition>
+        <transition name="newAnim">
+          <div class="box" v-if="show"></div>
+        </transition>
+      </div>
   </div>
 </template>
 
@@ -67,7 +80,8 @@
        isRounded: false,  //Деректива v-bind:class  - в данном случае будет проверять значение объекта isRounded, если оно true, тогда добавиться класс rounded кнопке выше
        disabled: false,   //Деректива v-bind - в данном случае проверит объект disabled и если оно вернет true, кнопке выше добавиться атрибут disabled="disabled"
        fontColor: '#ccc', //Деректива v-bind:style - добавляет атрибут style в данном случае кнопке и добавляет стили которые мы прописали в input c дерективой v-model="fontColor"
-       backgroundColor: 'yellow' //Деректива v-bind:style - добавляет атрибут style в данном случае кнопке и добавляет стили которые мы прописали в input c дерективой v-model="backgroundColor"
+       backgroundColor: 'yellow', //Деректива v-bind:style - добавляет атрибут style в данном случае кнопке и добавляет стили которые мы прописали в input c дерективой v-model="backgroundColor"
+       show: false      //Деректива v-if - изменяет значение show (true/false), если show - то элемент показывается и наоборот
       }
     },
     methods: {
@@ -92,8 +106,12 @@
 //Стили только для данного компонента scoped (значит только для этого компонента)
 <style scoped>
  .wrapper-StartScreen-Component {
-   max-width: 1700px;
+   max-width: 1200px;
    margin: 20px auto;
+   padding: 20px;
+   background: whitesmoke;
+   border-radius: 5px;
+   border: 1px solod silver
  }
  .red-block {
    width: 50px;
@@ -135,6 +153,44 @@
  .rounded {
    background: red;
  }
+ .vue-animation {
+   border: 1px solid silver;
+   margin-top: 10px;
+   padding: 10px;
+   width: 300px;
+ }
+ /* Стили для анимации */
+ .fade-enter-active, .fade-leave-active {
+   transition: opacity .5s;
+ }
+ .fade-enter, .fade-leave-to {
+   opacity: 0;
+ }
+ .box {
+   width: 100px;
+   height: 100px;
+   background: orange;
+ }
+ /* Стили для анимации */
+ .newAnim-enter-active {
+   animation: newAnim-in .5s;
+ }
+ .newAnim-leave-active {
+   animation: newAniw-in .5s reverse;
+ }
+ @keyframes newAnim-in {
+   0% {
+     transform: scale(0);
+   }
+   50% {
+     transform: scale(1.5);
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
+
+
 </style>
 
 
