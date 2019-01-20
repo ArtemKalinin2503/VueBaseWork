@@ -3,6 +3,8 @@
 
 Запуск приложения - npm run serve
 
+Ссылка на видео уроки https://www.youtube.com/watch?v=IMYO487lpxg&list=PLVfMKQXDAhGWFP61AzOs_PowY7OAaFRHU
+
 Основные дерективы для манипуляция над элементами страницы:
 
  - v-show="view"
