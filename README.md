@@ -4,9 +4,9 @@
 Основные дерективы для манипуляция над элементами страницы:
 
  - v-show="view"
-   - Показывает/скрывает элемент в Dom (display: none/block)
-   - export default {
-      data() {
-         view: false
-      }
-     }
+   - Добавляет/удаляет элемент в Dom (display: none/block)
+ - v-if="visible"
+   - Скрывает/показывает элемент (visible: visible/hidden)
+ -  v-model="valueInput" 
+   - Осуществялет render элемента (перерисовывает элемент)
+   
