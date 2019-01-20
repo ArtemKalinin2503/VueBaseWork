@@ -18,7 +18,7 @@
  - v-bind:title="msgTitle"
    - Связывает дерективны
  
- -  v-bind:class="[sizeToggle ? 'large' : '', {'rounded': isRounded}]"
+ - v-bind:class="[sizeToggle ? 'large' : '', {'rounded': isRounded}]"
    - Осуществляет проверку на true/false и исходя их этого вещает класс на элемент 
  
  - v-bind:style="styles"
