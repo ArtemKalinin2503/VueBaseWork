@@ -7,6 +7,6 @@
    - Добавляет/удаляет элемент в Dom (display: none/block)
  - v-if="visible"
    - Скрывает/показывает элемент (visible: visible/hidden)
- - v-model="valueInput" 
+ - v-model="..." 
    - Осуществялет render элемента (перерисовывает элемент)
    
