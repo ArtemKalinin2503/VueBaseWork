@@ -34,17 +34,26 @@
    - Показывает/скрывает элемент исходя что возвращает show
 
 Работа с анимацией элементов:
-  <div class="vue-animation">
-      <h5>Блок с анимацией</h5>
-      <!--С помощью дерективы v-on:click - будем изменять show-->
-      <button v-on:click="show = !show">Toggle</button>
-      <!--Тег для анимации все что внутри данного тега будет применяться анимация-->
-      <transition name="fade">
-        <!--Если деректива v-if - будет возвращать false - тогда элемент будет скрыт-->
-        <p v-if="show">Lorem ipsun dolor sit amet!</p>
-      </transition>
-      <transition name="newAnim">
-        <div class="box" v-if="show"></div>
-      </transition>
-  </div>
+
+ - Для анимации необходимо задать ключевой тег <transition></transition> и обвернуть ним элемент, который необходимо анимировать 
+ 
+ - Пример стилей для анимации:
+ 
+ .newAnim-enter-active {
+   animation: newAnim-in .5s;
+ }
+ .newAnim-leave-active {
+   animation: newAniw-in .5s reverse;
+ }
+ @keyframes newAnim-in {
+   0% {
+     transform: scale(0);
+   }
+   50% {
+     transform: scale(1.5);
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
  
